@@ -1,0 +1,6 @@
+export { default as First } from './1-first-request'
+export { default as Headers } from './2-headers'
+export { default as Posts } from './3-post-request'
+export { default as Global } from './4-global-instance'
+export { default as Custom } from './5-custom-instance'
+export { default as Interceptor } from './6-interceptors'
