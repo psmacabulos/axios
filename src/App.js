@@ -1,12 +1,11 @@
 import Title from './components/Title'
-import { Global } from './examples'
-import './axios/global'
+import { Custom } from './examples'
 
 function App() {
   return (
     <main>
       <Title />
-      <Global />
+      <Custom />
     </main>
   )
 }
