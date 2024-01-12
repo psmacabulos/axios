@@ -1,15 +1,27 @@
-import { useState } from 'react';
-import axios from 'axios';
+import { useState } from 'react'
+import axios from 'axios'
 
-const url = 'https://icanhazdadjoke.com/';
+const url = 'https://icanhazdadjoke.com/'
 // Accept : 'application/json'
 
 const Headers = () => {
-  const [joke, setJoke] = useState('random dad joke');
+  const [joke, setJoke] = useState('random dad joke')
 
   const fetchDadJoke = async () => {
-    console.log('fetch dad joke');
-  };
+    // use Promise
+    // axios
+    //   .get(url, { headers: { Accept: 'application/json' } })
+    //   .then(({ data }) => setJoke(data.joke))
+    //   .catch(e => console.log(e.message))
+
+    // using Async await
+    try {
+      const { data } = await axios(url, { headers: { Accept: 'application/json' } })
+      setJoke(data.joke)
+    } catch (error) {
+      console.log(error.message)
+    }
+  }
 
   return (
     <section className='section text-center'>
@@ -18,6 +30,6 @@ const Headers = () => {
       </button>
       <p className='dad-joke'>{joke}</p>
     </section>
-  );
-};
-export default Headers;
+  )
+}
+export default Headers

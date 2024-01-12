@@ -1,10 +1,10 @@
 import Title from './components/Title'
-import { First } from './examples'
+import { Headers } from './examples'
 function App() {
   return (
     <main>
       <Title />
-      <First />
+      <Headers />
     </main>
   )
 }
